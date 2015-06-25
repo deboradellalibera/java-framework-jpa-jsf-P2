@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html  xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+		<ui:composition template="/pages/layout/masterLayout.xhtml">
+		<ui:define name="conteudo">
+			<h:form>
+		
+			<h:panelGrid>
+				<h:outputText value="a = " />
+				<h:inputText value="#{calcBean.avalue}" />
+				<br/>
+				<h:outputText value="b = " />
+				<h:inputText value="#{calcBean.bvalue}" />
+				<br/>
+				
+				<h:outputText value="resultado = " />
+				<h:panelGroup>
+					<h:outputText value="#{calcBean.result}" />
+					<h:commandButton action="#{calcBean.somar}" value="Somar" />
+				</h:panelGroup>
+			</h:panelGrid>
+	
+		</h:form>
+		</ui:define>
+	</ui:composition>
+		
+</html> 
